@@ -25,6 +25,10 @@ public class Product {
     @Column(nullable = false)
     private String password;
 
+    @JoinColumn(name = "image_id", nullable = true)
+    @ManyToOne
+    private ImageFile image;
+
     @JoinColumn(name = "user_id", nullable = false)
     @ManyToOne
     private User seller;
