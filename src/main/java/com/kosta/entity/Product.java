@@ -23,7 +23,7 @@ public class Product {
     private int price;
 
     @Column(nullable = false)
-    private int password;
+    private String password;
 
     @JoinColumn(name = "user_id", nullable = false)
     @ManyToOne
