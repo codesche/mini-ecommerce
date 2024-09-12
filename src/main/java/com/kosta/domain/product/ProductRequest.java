@@ -1,4 +1,4 @@
-package com.kosta.domain;
+package com.kosta.domain.product;
 
 import com.kosta.entity.ImageFile;
 import com.kosta.entity.Product;

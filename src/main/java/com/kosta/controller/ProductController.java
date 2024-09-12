@@ -1,7 +1,7 @@
 package com.kosta.controller;
 
-import com.kosta.domain.ProductRequest;
-import com.kosta.domain.ProductResponse;
+import com.kosta.domain.product.ProductRequest;
+import com.kosta.domain.product.ProductResponse;
 import com.kosta.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
