@@ -112,6 +112,7 @@ public class WebSecurityConfig {
             config.setAllowedOriginPatterns(Collections.singletonList("http://localhost:3000"));
             config.setAllowCredentials(true);
             return config;
+
         };
     }
 }
