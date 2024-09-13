@@ -20,7 +20,7 @@ import java.io.IOException;
 public class LoginCustomAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
 
     private JwtAuthenticationService jwtAuthenticationService;
-    private static final AntPathRequestMatcher LOGIN_PATH = new AntPathRequestMatcher("/api/auth/login", "POST");
+    private static final AntPathRequestMatcher LOGIN_PATH = new AntPathRequestMatcher("/api/user/login", "POST");
 
     public LoginCustomAuthenticationFilter(AuthenticationManager authenticationManager,
                                            JwtAuthenticationService jwtAuthenticationService) {

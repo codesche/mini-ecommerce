@@ -91,7 +91,7 @@ public class JwtProvider {
     // JWT 토큰에서 인증 정보 반환하는 메서드
     public Authentication getAuthenticationByToken(String token) {
         log.info("[getAuthenticationByToken] 토큰 인증 정보 조회");
-        String userEmail = getUserEmailBytoken(token);
+        String userEmail = getUserEmailByToken(token);
         log.info(userEmail);
         User user = (User) userDetailsService.loadUserByUsername(userEmail);
         return new UsernamePasswordAuthenticationToken(
@@ -100,8 +100,8 @@ public class JwtProvider {
     }
 
     // JWT 토큰에서 사용자 ID만 추출하는 메서드
-    private String getUserEmailBytoken(String token) {
-        log.info("[getUserEmailBytoken] 사용자 ID 추출");
+    public String getUserEmailByToken(String token) {
+        log.info("[getUserEmailByToken] 사용자 ID 추출");
         Claims claims = getClaims(token);
         String email = claims.get("sub", String.class);
         return email;
